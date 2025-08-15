@@ -12,6 +12,7 @@ export default function Navigation() {
     { href: "#nfts", label: "NFTs" },
     { href: "#homebase", label: "Homebase" },
     { href: "#tokenization", label: "Tokenization" },
+    { href: "#prices", label: "Prices" },
   ];
 
   const scrollToSection = (id: string) => {
