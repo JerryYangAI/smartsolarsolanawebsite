@@ -10,13 +10,7 @@ export default function Footer() {
     { label: "Real Estate Tokenization", href: "#tokenization" },
   ];
 
-  const resourceLinks = [
-    { label: "Solana Official", href: "https://solana.com", external: true },
-    { label: "Homebase Platform", href: "https://www.homebasedao.io", external: true },
-    { label: "Magic Eden NFTs", href: "https://magiceden.io", external: true },
-    { label: "Jupiter DEX", href: "https://jup.ag", external: true },
-    { label: "Phantom Wallet", href: "https://phantom.app", external: true },
-  ];
+  const resourceLinks: { label: string; href: string; external?: boolean }[] = [];
 
   const socialLinks = [
     { icon: "𝕏", href: "#", label: "Twitter" },
@@ -41,7 +35,7 @@ export default function Footer() {
   return (
     <footer className="bg-crypto-gray py-16" data-testid="footer">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Brand */}
           <div data-testid="footer-brand">
             <div className="flex items-center space-x-2 mb-6">
@@ -83,24 +77,7 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Resources */}
-          <div data-testid="footer-resources">
-            <h4 className="text-lg font-semibold mb-6 text-white">Resources</h4>
-            <div className="space-y-3">
-              {resourceLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  target={link.external ? "_blank" : undefined}
-                  rel={link.external ? "noopener noreferrer" : undefined}
-                  className="block text-gray-300 hover:text-solana-green transition-colors duration-300"
-                  data-testid={`resource-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
+          {/* Resources - Removed as per user request */}
           
           {/* Contact */}
           <div data-testid="footer-contact">
